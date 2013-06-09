@@ -4,14 +4,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.mmorts.core.shared.conf.ScriptContext;
+import com.mmorts.core.shared.conf.MyScriptContext;
 import com.mmorts.core.shared.conf.ScriptUtils;
 
-public class ScriptUtilsGroovy implements ScriptUtils {
+public class ScriptUtilsImpl implements ScriptUtils {
 
-    ScriptContext sc;
+    MyScriptContext sc;
 
-    public ScriptUtilsGroovy(ScriptContext sc) {
+    public ScriptUtilsImpl(MyScriptContext sc) {
         this.sc = sc;
     }
 
@@ -46,6 +46,7 @@ public class ScriptUtilsGroovy implements ScriptUtils {
     public int getInt() {
         if (something instanceof Double) return (int) Math.round((Double) something);
         if (something instanceof Integer) return (Integer) something;
+        if (something instanceof Long) return ((Long)something).intValue();
         sc.addError("Integer expected");
         return -1;
     }

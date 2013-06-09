@@ -1,4 +1,3 @@
-function loadTiles(tileConf) {
 var defaultTile = function(tile) { return tileConf.defaultTile(tile); }
 var newGroup = function(name, attr) { return tileConf.newGroup(name, attr); }
 var newTile = function(name, attr) { return tileConf.newTile(name, attr); }
@@ -376,4 +375,3 @@ newGroup("bush", {
 		sub("bush", {type:"solid", offset: 0})
 	]
 });
-}

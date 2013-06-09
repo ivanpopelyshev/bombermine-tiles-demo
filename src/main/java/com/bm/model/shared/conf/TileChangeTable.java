@@ -2,7 +2,7 @@ package com.bm.model.shared.conf;
 
 import com.bm.model.shared.conf.TileChange.Variant;
 import com.mmorts.core.shared.conf.ScriptClassTable;
-import com.mmorts.core.shared.conf.ScriptContext;
+import com.mmorts.core.shared.conf.MyScriptContext;
 import com.mmorts.core.shared.conf.ScriptUtils;
 
 public class TileChangeTable extends ScriptClassTable<TileChange> {
@@ -28,7 +28,7 @@ public class TileChangeTable extends ScriptClassTable<TileChange> {
 
     public Object newTileChange(String name, Object desc) {
         TileChange tc = create();
-        ScriptContext context = conf.context;
+        MyScriptContext context = conf.context;
         tc.name = name;
         ScriptUtils utils = context.utils;
         Variant main = parseVariant(utils, desc);

@@ -1,7 +1,7 @@
 package com.bm.model.shared.conf;
 
 import com.mmorts.core.shared.conf.ScriptClassTable;
-import com.mmorts.core.shared.conf.ScriptContext;
+import com.mmorts.core.shared.conf.MyScriptContext;
 import com.mmorts.core.shared.conf.ScriptUtils;
 
 public class TileTable extends ScriptClassTable<Tile> {
@@ -18,7 +18,7 @@ public class TileTable extends ScriptClassTable<Tile> {
 
     public Object newTile(String name, Object desc) {
         Tile tile = create();
-        ScriptContext context = conf.context;
+        MyScriptContext context = conf.context;
         tile.name = name;
         ScriptUtils utils = context.utils;
         if (utils.getField(desc, "onDamage")) tile.onDamage = conf.unwrapChangeOrTile(utils.getObject());

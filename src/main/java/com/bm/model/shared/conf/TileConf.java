@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 import com.mmorts.core.shared.conf.ScriptClass;
 import com.mmorts.core.shared.conf.ScriptClassTable;
-import com.mmorts.core.shared.conf.ScriptContext;
+import com.mmorts.core.shared.conf.MyScriptContext;
 import com.mmorts.core.shared.conf.ScriptUtils;
 
 public class TileConf {
@@ -72,15 +72,15 @@ public class TileConf {
         changes.byName.put("next", next);
     }
 
-    public void setContext(ScriptContext context) {
+    public void setContext(MyScriptContext context) {
         this.context = context;
     }
 
-    public ScriptContext getContext() {
+    public MyScriptContext getContext() {
         return context;
     }
 
-    protected ScriptContext context;
+    protected MyScriptContext context;
     protected ScriptUtils sf;
 
     public int defaultTile, defaultGroup;

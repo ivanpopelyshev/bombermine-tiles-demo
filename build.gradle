@@ -19,6 +19,7 @@ compileTestJava {
 dependencies {
 	compile 'com.google.gwt:gwt-user:2.5.1'
 	compile 'junit:junit:4.11'
+	compile group: 'org.jruby', name: 'jruby', version: '1.7.4'
     compile group: 'rhino', name: 'js', version: '1.7R2'
     compile group: 'log4j', name: 'log4j', version: '1.2.16'
 	compile group: 'org.codehaus.jackson', name: 'jackson-core-lgpl', version: '1.9.12'

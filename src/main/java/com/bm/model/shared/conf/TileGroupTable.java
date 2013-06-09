@@ -1,7 +1,7 @@
 package com.bm.model.shared.conf;
 
 import com.mmorts.core.shared.conf.ScriptClassTable;
-import com.mmorts.core.shared.conf.ScriptContext;
+import com.mmorts.core.shared.conf.MyScriptContext;
 import com.mmorts.core.shared.conf.ScriptUtils;
 
 public class TileGroupTable extends ScriptClassTable<TileGroup> {
@@ -19,7 +19,7 @@ public class TileGroupTable extends ScriptClassTable<TileGroup> {
     // TODO: больно уж группа напоминает прототип. Можно будет это использовать
     public Object newGroup(String name, Object desc) {
         TileGroup group = create();
-        ScriptContext context = conf.context;
+        MyScriptContext context = conf.context;
         group.name = name;
         ScriptUtils utils = context.utils;
         int image = -1, background = -1, type = -1, onDamage = -1, onAtomic = -1, onBomb = -1, onPremiumDamage = -1, subground = -1;

@@ -1,7 +1,7 @@
 package com.bm.model.shared.conf;
 
 import com.mmorts.core.shared.conf.ScriptClassTable;
-import com.mmorts.core.shared.conf.ScriptContext;
+import com.mmorts.core.shared.conf.MyScriptContext;
 import com.mmorts.core.shared.conf.ScriptUtils;
 
 public class SlotTable extends ScriptClassTable<Slot> {
@@ -18,7 +18,7 @@ public class SlotTable extends ScriptClassTable<Slot> {
 
     public Object newSlot(String name, Object desc) {
         Slot slot = create();
-        ScriptContext context = conf.context;
+        MyScriptContext context = conf.context;
         slot.name = name;
         ScriptUtils utils = context.utils;
         if (utils.getField(desc, "image")) slot.image = utils.getInt();

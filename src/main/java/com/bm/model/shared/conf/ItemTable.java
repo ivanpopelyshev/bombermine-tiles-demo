@@ -2,7 +2,7 @@ package com.bm.model.shared.conf;
 
 import com.bm.model.shared.conf.Item.Variant;
 import com.mmorts.core.shared.conf.ScriptClassTable;
-import com.mmorts.core.shared.conf.ScriptContext;
+import com.mmorts.core.shared.conf.MyScriptContext;
 import com.mmorts.core.shared.conf.ScriptUtils;
 
 public class ItemTable extends ScriptClassTable<Item> {
@@ -28,7 +28,7 @@ public class ItemTable extends ScriptClassTable<Item> {
 
     public Object newItem(String name, Object desc) {
         Item item = create();
-        ScriptContext context = conf.context;
+        MyScriptContext context = conf.context;
         item.name = name;
         ScriptUtils utils = context.utils;
         if (utils.getField(desc, "all")) item.all = true;

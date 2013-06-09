@@ -3,7 +3,7 @@ package com.bm.gwt.client.conf;
 import com.bm.model.shared.conf.TileConf;
 import com.bm.model.shared.conf.TileConfJava2Js;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.mmorts.core.shared.conf.ScriptContext;
+import com.mmorts.core.shared.conf.MyScriptContext;
 
 public class TileConfGWT extends JavaScriptObject {
     protected TileConfGWT() {
@@ -35,7 +35,7 @@ public class TileConfGWT extends JavaScriptObject {
 
     public static TileConf buildTileConf() {
         TileConf conf = new TileConf();
-        ScriptContext context = new ScriptContext();
+        MyScriptContext context = new MyScriptContext();
         conf.setContext(context);
         context.utils = ScriptUtilsGWT.create();
         TileConfJava2Js jj = new TileConfJava2Js(conf);

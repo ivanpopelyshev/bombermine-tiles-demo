@@ -10,7 +10,7 @@ public abstract class ScriptClassTable<T extends ScriptClass> {
     public String className;
     public int idShift;
 
-    public T newInstance(ScriptContext context, T clazz) {
+    public T newInstance(MyScriptContext context, T clazz) {
         context.define(clazz, byName.get(clazz.name), className);
         clazz.defined = true;
         if (!byName.containsKey(clazz.name)) {
@@ -25,7 +25,7 @@ public abstract class ScriptClassTable<T extends ScriptClass> {
     }
 
     // TODO: что если name == ""
-    public T getInstance(ScriptContext context, String name) {
+    public T getInstance(MyScriptContext context, String name) {
         if (byName.containsKey(name)) {
             return byName.get(name);
         }
@@ -59,7 +59,7 @@ public abstract class ScriptClassTable<T extends ScriptClass> {
         return this;
     }
 
-    public Object getAndWrap(ScriptContext context, String name) {
+    public Object getAndWrap(MyScriptContext context, String name) {
         T instance = getInstance(context, name);
         return context.utils.wrap(instance.id, className);
     }

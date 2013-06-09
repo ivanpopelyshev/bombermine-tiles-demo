@@ -31,13 +31,20 @@ public class ScriptTest {
 
     @Test
     public void testRhino() {
-        TileConf conf = new ScriptRunnerRhino().readTileConf("conf/tiles.js");
+        TileConf conf = new ScriptRunner().readTileConf("JavaScript", "conf/tiles.js");
         basicAssert(conf);
     }
 
     @Test
     public void testGroovy() {
-        TileConf conf = new ScriptRunnerGroovy().readTileConf("conf/tiles.groovy");
+        TileConf conf = new ScriptRunner().readTileConf("groovy", "conf/tiles.groovy");
+        basicAssert(conf);
+        System.out.println(conf.dumpString());
+    }
+
+    @Test
+    public void testRuby() {
+        TileConf conf = new ScriptRunner().readTileConf("ruby", "conf/tiles.ruby");
         basicAssert(conf);
         System.out.println(conf.dumpString());
     }

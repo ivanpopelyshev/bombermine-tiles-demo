@@ -8,7 +8,7 @@ All tiles and items are described by code, which builds simple class tables, whi
 
 [JS config](conf/tiles.js) can run on both server and client (GWT), so there is no need to transmit class tables through websockets.
 
-[Groovy config](conf/tiles.groovy) runs only by the server.
+[Groovy config](conf/tiles.groovy) and [JRuby config](conf/tiles.groovy) runs only by the server.
 
 ## Building & Testing
 Install [Gradle](http://www.gradle.org/)

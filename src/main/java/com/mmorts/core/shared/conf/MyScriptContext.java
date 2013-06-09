@@ -3,7 +3,7 @@ package com.mmorts.core.shared.conf;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class ScriptContext {
+public class MyScriptContext {
     public static class Location {
         public String filename;
         public int line, pos;
