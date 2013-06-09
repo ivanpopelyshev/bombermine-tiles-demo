@@ -1,5 +1,7 @@
 # Bombermine-tiles-demo
 
+![Bombermine](img/bombermine.jpg)
+
 That old code shows how bombermine handle a lot of tiles and items.
 
 All tiles and items are described by code, which builds simple class tables, which can be transmitted to client.
